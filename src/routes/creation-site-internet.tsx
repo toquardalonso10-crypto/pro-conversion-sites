@@ -42,7 +42,7 @@ const content: LandingContent = {
   ],
   bodyTitle: "Ce que change un site conçu pour convertir",
   body: [
-    "La plupdes sites d'entreprise présentent une activité sans jamais guider le visiteur. Le résultat est simple : la personne lit, hésite, puis va comparer ailleurs. Un site conçu pour convertir fait l'inverse : il rassure, prouve, et propose une action claire au bon moment.",
+    "La plupart des sites d'entreprise présentent une activité sans jamais guider le visiteur. Le résultat est simple : la personne lit, hésite, puis va comparer ailleurs. Un site conçu pour convertir fait l'inverse : il rassure, prouve, et propose une action claire au bon moment.",
     "Concrètement, nous travaillons la hiérarchie de l'information, la lisibilité mobile, la preuve (réalisations, avis, détails de vos prestations) et la simplicité du formulaire. Un champ inutile en moins, c'est une demande de devis en plus.",
     "Nous ne promettons pas de position sur Google ni de volume de clients : personne ne peut le faire sérieusement. Nous garantissons un site propre, rapide, compréhensible et mesuré, pour que chaque euro investi soit suivi.",
   ],
