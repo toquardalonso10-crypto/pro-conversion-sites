@@ -10,33 +10,142 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CreationSiteInternetRouteImport } from './routes/creation-site-internet'
+import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
+import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
+import { Route as SiteInternetArtisanRouteImport } from './routes/site-internet-artisan'
+import { Route as SiteInternetCouvreurRouteImport } from './routes/site-internet-couvreur'
+import { Route as SiteInternetElectricienRouteImport } from './routes/site-internet-electricien'
+import { Route as SiteInternetPlombierRouteImport } from './routes/site-internet-plombier'
+import { Route as SiteInternetPmeRouteImport } from './routes/site-internet-pme'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CreationSiteInternetRoute = CreationSiteInternetRouteImport.update({
+  id: '/creation-site-internet',
+  path: '/creation-site-internet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentionsLegalesRoute = MentionsLegalesRouteImport.update({
+  id: '/mentions-legales',
+  path: '/mentions-legales',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PolitiqueDeConfidentialiteRoute =
+  PolitiqueDeConfidentialiteRouteImport.update({
+    id: '/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SiteInternetArtisanRoute = SiteInternetArtisanRouteImport.update({
+  id: '/site-internet-artisan',
+  path: '/site-internet-artisan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SiteInternetCouvreurRoute = SiteInternetCouvreurRouteImport.update({
+  id: '/site-internet-couvreur',
+  path: '/site-internet-couvreur',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SiteInternetElectricienRoute = SiteInternetElectricienRouteImport.update({
+  id: '/site-internet-electricien',
+  path: '/site-internet-electricien',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SiteInternetPlombierRoute = SiteInternetPlombierRouteImport.update({
+  id: '/site-internet-plombier',
+  path: '/site-internet-plombier',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SiteInternetPmeRoute = SiteInternetPmeRouteImport.update({
+  id: '/site-internet-pme',
+  path: '/site-internet-pme',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/creation-site-internet': typeof CreationSiteInternetRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/site-internet-artisan': typeof SiteInternetArtisanRoute
+  '/site-internet-couvreur': typeof SiteInternetCouvreurRoute
+  '/site-internet-electricien': typeof SiteInternetElectricienRoute
+  '/site-internet-plombier': typeof SiteInternetPlombierRoute
+  '/site-internet-pme': typeof SiteInternetPmeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/creation-site-internet': typeof CreationSiteInternetRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/site-internet-artisan': typeof SiteInternetArtisanRoute
+  '/site-internet-couvreur': typeof SiteInternetCouvreurRoute
+  '/site-internet-electricien': typeof SiteInternetElectricienRoute
+  '/site-internet-plombier': typeof SiteInternetPlombierRoute
+  '/site-internet-pme': typeof SiteInternetPmeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/creation-site-internet': typeof CreationSiteInternetRoute
+  '/mentions-legales': typeof MentionsLegalesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/site-internet-artisan': typeof SiteInternetArtisanRoute
+  '/site-internet-couvreur': typeof SiteInternetCouvreurRoute
+  '/site-internet-electricien': typeof SiteInternetElectricienRoute
+  '/site-internet-plombier': typeof SiteInternetPlombierRoute
+  '/site-internet-pme': typeof SiteInternetPmeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/creation-site-internet'
+    | '/mentions-legales'
+    | '/politique-de-confidentialite'
+    | '/site-internet-artisan'
+    | '/site-internet-couvreur'
+    | '/site-internet-electricien'
+    | '/site-internet-plombier'
+    | '/site-internet-pme'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/creation-site-internet'
+    | '/mentions-legales'
+    | '/politique-de-confidentialite'
+    | '/site-internet-artisan'
+    | '/site-internet-couvreur'
+    | '/site-internet-electricien'
+    | '/site-internet-plombier'
+    | '/site-internet-pme'
+  id:
+    | '__root__'
+    | '/'
+    | '/creation-site-internet'
+    | '/mentions-legales'
+    | '/politique-de-confidentialite'
+    | '/site-internet-artisan'
+    | '/site-internet-couvreur'
+    | '/site-internet-electricien'
+    | '/site-internet-plombier'
+    | '/site-internet-pme'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CreationSiteInternetRoute: typeof CreationSiteInternetRoute
+  MentionsLegalesRoute: typeof MentionsLegalesRoute
+  PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
+  SiteInternetArtisanRoute: typeof SiteInternetArtisanRoute
+  SiteInternetCouvreurRoute: typeof SiteInternetCouvreurRoute
+  SiteInternetElectricienRoute: typeof SiteInternetElectricienRoute
+  SiteInternetPlombierRoute: typeof SiteInternetPlombierRoute
+  SiteInternetPmeRoute: typeof SiteInternetPmeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +157,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/creation-site-internet': {
+      id: '/creation-site-internet'
+      path: '/creation-site-internet'
+      fullPath: '/creation-site-internet'
+      preLoaderRoute: typeof CreationSiteInternetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mentions-legales': {
+      id: '/mentions-legales'
+      path: '/mentions-legales'
+      fullPath: '/mentions-legales'
+      preLoaderRoute: typeof MentionsLegalesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politique-de-confidentialite': {
+      id: '/politique-de-confidentialite'
+      path: '/politique-de-confidentialite'
+      fullPath: '/politique-de-confidentialite'
+      preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/site-internet-artisan': {
+      id: '/site-internet-artisan'
+      path: '/site-internet-artisan'
+      fullPath: '/site-internet-artisan'
+      preLoaderRoute: typeof SiteInternetArtisanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/site-internet-couvreur': {
+      id: '/site-internet-couvreur'
+      path: '/site-internet-couvreur'
+      fullPath: '/site-internet-couvreur'
+      preLoaderRoute: typeof SiteInternetCouvreurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/site-internet-electricien': {
+      id: '/site-internet-electricien'
+      path: '/site-internet-electricien'
+      fullPath: '/site-internet-electricien'
+      preLoaderRoute: typeof SiteInternetElectricienRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/site-internet-plombier': {
+      id: '/site-internet-plombier'
+      path: '/site-internet-plombier'
+      fullPath: '/site-internet-plombier'
+      preLoaderRoute: typeof SiteInternetPlombierRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/site-internet-pme': {
+      id: '/site-internet-pme'
+      path: '/site-internet-pme'
+      fullPath: '/site-internet-pme'
+      preLoaderRoute: typeof SiteInternetPmeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CreationSiteInternetRoute: CreationSiteInternetRoute,
+  MentionsLegalesRoute: MentionsLegalesRoute,
+  PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
+  SiteInternetArtisanRoute: SiteInternetArtisanRoute,
+  SiteInternetCouvreurRoute: SiteInternetCouvreurRoute,
+  SiteInternetElectricienRoute: SiteInternetElectricienRoute,
+  SiteInternetPlombierRoute: SiteInternetPlombierRoute,
+  SiteInternetPmeRoute: SiteInternetPmeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
