@@ -1,24 +1,83 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/sections/Hero";
+import { Problem } from "@/components/sections/Problem";
+import { Solution } from "@/components/sections/Solution";
+import { Value } from "@/components/sections/Value";
+import { BeforeAfter } from "@/components/sections/BeforeAfter";
+import { Sectors } from "@/components/sections/Sectors";
+import { Portfolio } from "@/components/sections/Portfolio";
+import { Pricing } from "@/components/sections/Pricing";
+import { Roi } from "@/components/sections/Roi";
+import { Process } from "@/components/sections/Process";
+import { Trust } from "@/components/sections/Trust";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Faq } from "@/components/sections/Faq";
+import { FinalCta } from "@/components/sections/FinalCta";
+import { faq, site } from "@/lib/site";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Création de sites internet qui apportent des clients | Kliviq";
+const description =
+  "Agence de création de sites internet professionnels pour artisans, commerces et PME. Des sites rapides, optimisés Google et conçus pour générer des demandes de devis.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: site.name,
+          description,
+          areaServed: "France",
+          serviceType: "Création de sites internet professionnels",
+          url: "/",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <Problem />
+      <Solution />
+      <Value />
+      <BeforeAfter />
+      <Sectors />
+      <Portfolio />
+      <Pricing />
+      <Roi />
+      <Process />
+      <Trust />
+      <Testimonials />
+      <Faq />
+      <FinalCta />
+    </>
   );
 }
