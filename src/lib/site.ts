@@ -1,8 +1,3 @@
-import toiture from "@/assets/projet-toiture.jpg";
-import restaurant from "@/assets/projet-restaurant.jpg";
-import garage from "@/assets/projet-garage.jpg";
-import pme from "@/assets/projet-pme.jpg";
-
 /** Coordonnées de l'agence — à remplacer par les vraies informations. */
 export const site = {
   name: "Kliviq",
@@ -22,7 +17,6 @@ export type Project = {
   category: ProjectCategory;
   goal: string;
   outcome: string;
-  image: string;
   highlights: string[];
 };
 
@@ -39,7 +33,6 @@ export const projects: Project[] = [
     category: "Artisans",
     goal: "Transformer les visiteurs locaux en demandes de devis.",
     outcome: "Une expérience pensée pour générer davantage de demandes de devis qualifiées.",
-    image: toiture,
     highlights: [
       "Parcours de devis en 3 champs, accessible depuis chaque section",
       "Pages de zones d'intervention pour la visibilité locale",
@@ -53,7 +46,6 @@ export const projects: Project[] = [
     category: "Restaurants",
     goal: "Faciliter la réservation et la consultation de la carte sur mobile.",
     outcome: "Une navigation mobile pensée pour réserver en moins de deux clics.",
-    image: restaurant,
     highlights: [
       "Menu lisible sans zoom, chargement instantané",
       "Bouton de réservation et appel toujours visibles",
@@ -67,7 +59,6 @@ export const projects: Project[] = [
     category: "Services",
     goal: "Recevoir des demandes de rendez-vous sans passer par le téléphone.",
     outcome: "Un formulaire de rendez-vous simple, pensé pour être complété en une minute.",
-    image: garage,
     highlights: [
       "Prise de rendez-vous par prestation",
       "Réassurance : délais, tarifs indicatifs, marques traitées",
@@ -81,7 +72,6 @@ export const projects: Project[] = [
     category: "PME",
     goal: "Crédibiliser l'entreprise auprès de prospects et de futurs collaborateurs.",
     outcome: "Une présentation structurée pour appuyer les rendez-vous commerciaux.",
-    image: pme,
     highlights: [
       "Pages métiers et références structurées",
       "Documentation téléchargeable contre coordonnées",
@@ -96,10 +86,11 @@ export const sectors = [
   "Couvreurs",
   "Plombiers",
   "Électriciens",
+  "Élagueurs",
   "Paysagistes",
   "Garages",
   "Restaurants",
-  "Commerces",
+  "Boutiques & commerces",
   "Coiffeurs",
   "Indépendants",
   "Agences immobilières",
@@ -118,58 +109,42 @@ export type Offer = {
 };
 
 /**
- * Offres. Les tarifs sont volontairement indicatifs et centralisés ici :
- * modifiez `price` / `priceNote` pour faire évoluer la stratégie tarifaire.
+ * Offres. Deux façons de travailler avec nous : un tarif fixe pour démarrer
+ * vite, un devis sur mesure pour un projet à votre image.
  */
 export const offers: Offer[] = [
   {
-    name: "Essentiel",
-    price: "Sur devis",
-    priceNote: "Projet cadré, périmètre simple",
-    pitch: "Pour les entreprises qui veulent une présence professionnelle en ligne.",
+    name: "Classique",
+    price: "500 €",
+    priceNote: "Prix fixe, sans surprise",
+    pitch: "Pour les artisans, commerces et indépendants qui veulent une présence professionnelle en ligne, rapidement.",
     features: [
-      "Site professionnel",
-      "Design personnalisé",
-      "Responsive mobile, tablette, ordinateur",
+      "Site de 3 à 5 pages (accueil, services, à propos, contact...)",
+      "Design professionnel adapté à votre activité",
+      "100% responsive (mobile, tablette, ordinateur)",
       "Formulaire de contact",
-      "Optimisation de base",
-      "Mise en ligne",
+      "Optimisation de base pour Google",
+      "Mise en ligne incluse",
+      "Nom de domaine en option (+50 €)",
     ],
-    cta: "Choisir cette formule",
+    cta: "Choisir le site Classique",
   },
   {
-    name: "Performance",
-    price: "Sur devis",
-    priceNote: "Le meilleur équilibre valeur / résultat",
-    pitch: "Pour les entreprises qui veulent transformer leur site en véritable outil commercial.",
+    name: "Sur-Mesure",
+    price: "Devis personnalisé",
+    priceNote: "Le périmètre est défini avec vous",
+    pitch: "Pour les commerces et entreprises qui veulent un site pensé pour leur image et leurs besoins spécifiques.",
     features: [
-      "Tout ce qui est inclus dans Essentiel",
-      "Stratégie de conversion",
-      "Optimisation SEO",
-      "Animations premium",
-      "Intégration Google Maps",
-      "Formulaire de devis avancé",
-      "Optimisation de la vitesse",
-      "Suivi des conversions",
-    ],
-    cta: "Choisir Performance",
-    featured: true,
-  },
-  {
-    name: "Premium",
-    price: "Projet sur mesure",
-    priceNote: "Périmètre défini avec vous",
-    pitch: "Pour les entreprises qui veulent une expérience digitale haut de gamme.",
-    features: [
-      "Tout Performance",
-      "Design entièrement sur mesure",
-      "Animations avancées",
-      "Fonctionnalités personnalisées",
-      "Espace client ou fonctionnalités spécifiques selon besoin",
-      "Accompagnement stratégique",
-      "Optimisation avancée",
+      "Tout ce qui est inclus dans Classique",
+      "Design entièrement personnalisé, pensé pour votre marque",
+      "Nombre de pages illimité selon le projet",
+      "Fonctionnalités sur mesure (réservation, catalogue, prise de rendez-vous, espace client...)",
+      "Stratégie de conversion et copywriting",
+      "Optimisation SEO avancée",
+      "Accompagnement stratégique dédié",
     ],
     cta: "Parler de mon projet",
+    featured: true,
   },
 ];
 
@@ -209,5 +184,24 @@ export const faq = [
   {
     q: "Travaillez-vous avec les entreprises locales ?",
     a: "C'est notre cœur de métier : artisans, commerces, PME et professions indépendantes qui veulent être trouvés et choisis dans leur zone.",
+  },
+];
+
+export const pricingFaq = [
+  {
+    q: "Qu'est-ce qui n'est pas inclus dans le site à 500 € ?",
+    a: "Le prix de 500 € couvre la conception et la mise en ligne d'un site de 3 à 5 pages. Le nom de domaine est disponible en option pour 50 €. Nous clarifions avec vous, avant de commencer, exactement ce qui est inclus : aucune surprise après livraison.",
+  },
+  {
+    q: "Puis-je commencer par le site Classique et évoluer vers le Sur-Mesure plus tard ?",
+    a: "Oui. Beaucoup de clients démarrent avec un site Classique pour être présents rapidement, puis nous sollicitent pour une refonte Sur-Mesure une fois leur activité développée.",
+  },
+  {
+    q: "Comment est calculé le prix d'un projet Sur-Mesure ?",
+    a: "Sur la base d'un premier échange sur votre activité, vos besoins et vos fonctionnalités souhaitées. Vous recevez ensuite un devis détaillé, sans coût caché ni ligne floue.",
+  },
+  {
+    q: "Y a-t-il des frais récurrents après la livraison ?",
+    a: "Le nom de domaine et l'hébergement font l'objet d'un renouvellement, dont nous vous expliquons clairement le coût avant la mise en ligne. Il n'y a pas d'abonnement caché à notre agence.",
   },
 ];

@@ -2,8 +2,7 @@ import { useCallback, useRef, useState } from "react";
 import { MoveHorizontal } from "lucide-react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
-import avant from "@/assets/avant.jpg";
-import apres from "@/assets/apres.jpg";
+import { SiteMockup } from "@/components/SiteMockup";
 
 export function BeforeAfter() {
   const [pos, setPos] = useState(50);
@@ -41,26 +40,15 @@ export function BeforeAfter() {
             onPointerLeave={() => (dragging.current = false)}
             className="shadow-elegant relative aspect-[4/3] w-full touch-none overflow-hidden rounded-3xl border border-border select-none sm:aspect-[16/10]"
           >
-            <img
-              src={apres}
-              alt="Site internet moderne, premium et orienté conversion"
-              loading="lazy"
-              width={1200}
-              height={900}
-              className="absolute inset-0 size-full object-cover"
-            />
+            <div className="absolute inset-0" aria-label="Site internet moderne, premium et orienté conversion">
+              <SiteMockup variant="polished" />
+            </div>
             <div
               className="absolute inset-0 overflow-hidden"
               style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+              aria-label="Ancien site internet peu professionnel"
             >
-              <img
-                src={avant}
-                alt="Ancien site internet peu professionnel et mal affiché sur mobile"
-                loading="lazy"
-                width={1200}
-                height={900}
-                className="size-full object-cover"
-              />
+              <SiteMockup variant="dated" />
             </div>
 
             <span className="absolute top-4 left-4 rounded-full bg-background/80 px-3 py-1 text-xs font-medium backdrop-blur">

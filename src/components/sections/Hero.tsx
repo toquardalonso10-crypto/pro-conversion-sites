@@ -1,8 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HeroVisual } from "@/components/HeroVisual";
 import { track } from "@/lib/analytics";
-import heroDevices from "@/assets/hero-devices.jpg";
 
 const proofs = [
   "Design professionnel",
@@ -66,18 +66,8 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="animate-in fade-in slide-in-from-bottom-8 relative duration-1000">
-          <div
-            aria-hidden
-            className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-primary/15 blur-3xl"
-          />
-          <img
-            src={heroDevices}
-            width={1600}
-            height={1200}
-            alt="Sites internet professionnels affichés sur un ordinateur portable, une tablette et un smartphone"
-            className="shadow-elegant w-full rounded-3xl border border-border"
-          />
+        <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <HeroVisual />
         </div>
       </div>
     </section>

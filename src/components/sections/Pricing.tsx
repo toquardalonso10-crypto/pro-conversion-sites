@@ -12,11 +12,11 @@ export function Pricing() {
       <div className="container-page">
         <SectionHeading
           eyebrow="Offres"
-          title="Trois façons de travailler avec nous."
-          subtitle="Le périmètre exact est défini avec vous lors du premier échange. Vous recevez ensuite un devis clair, sans coût caché."
+          title="Deux façons de démarrer, un site qui vous ressemble."
+          subtitle="Le site Classique convient à la majorité des artisans et commerces. Le Sur-Mesure s'adresse à ceux qui veulent une identité unique et des fonctionnalités spécifiques. Dans les deux cas, vous savez ce que vous payez avant de commencer."
         />
 
-        <ul className="mt-14 grid items-start gap-6 lg:grid-cols-3">
+        <ul className="mx-auto mt-14 grid max-w-4xl items-start gap-6 md:grid-cols-2">
           {offers.map((o, i) => (
             <Reveal as="li" key={o.name} delay={i * 100}>
               <div

@@ -10,18 +10,36 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgenceRouteImport } from './routes/agence'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreationSiteInternetRouteImport } from './routes/creation-site-internet'
 import { Route as MentionsLegalesRouteImport } from './routes/mentions-legales'
 import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
+import { Route as ProcessusRouteImport } from './routes/processus'
+import { Route as RealisationsRouteImport } from './routes/realisations'
 import { Route as SiteInternetArtisanRouteImport } from './routes/site-internet-artisan'
+import { Route as SiteInternetBoutiqueRouteImport } from './routes/site-internet-boutique'
 import { Route as SiteInternetCouvreurRouteImport } from './routes/site-internet-couvreur'
+import { Route as SiteInternetElagueurRouteImport } from './routes/site-internet-elagueur'
 import { Route as SiteInternetElectricienRouteImport } from './routes/site-internet-electricien'
 import { Route as SiteInternetPlombierRouteImport } from './routes/site-internet-plombier'
 import { Route as SiteInternetPmeRouteImport } from './routes/site-internet-pme'
+import { Route as SiteInternetRestaurantRouteImport } from './routes/site-internet-restaurant'
+import { Route as TarifsRouteImport } from './routes/tarifs'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AgenceRoute = AgenceRouteImport.update({
+  id: '/agence',
+  path: '/agence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CreationSiteInternetRoute = CreationSiteInternetRouteImport.update({
@@ -40,14 +58,34 @@ const PolitiqueDeConfidentialiteRoute =
     path: '/politique-de-confidentialite',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ProcessusRoute = ProcessusRouteImport.update({
+  id: '/processus',
+  path: '/processus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RealisationsRoute = RealisationsRouteImport.update({
+  id: '/realisations',
+  path: '/realisations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SiteInternetArtisanRoute = SiteInternetArtisanRouteImport.update({
   id: '/site-internet-artisan',
   path: '/site-internet-artisan',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SiteInternetBoutiqueRoute = SiteInternetBoutiqueRouteImport.update({
+  id: '/site-internet-boutique',
+  path: '/site-internet-boutique',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SiteInternetCouvreurRoute = SiteInternetCouvreurRouteImport.update({
   id: '/site-internet-couvreur',
   path: '/site-internet-couvreur',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SiteInternetElagueurRoute = SiteInternetElagueurRouteImport.update({
+  id: '/site-internet-elagueur',
+  path: '/site-internet-elagueur',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SiteInternetElectricienRoute = SiteInternetElectricienRouteImport.update({
@@ -65,87 +103,153 @@ const SiteInternetPmeRoute = SiteInternetPmeRouteImport.update({
   path: '/site-internet-pme',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SiteInternetRestaurantRoute = SiteInternetRestaurantRouteImport.update({
+  id: '/site-internet-restaurant',
+  path: '/site-internet-restaurant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TarifsRoute = TarifsRouteImport.update({
+  id: '/tarifs',
+  path: '/tarifs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agence': typeof AgenceRoute
+  '/contact': typeof ContactRoute
   '/creation-site-internet': typeof CreationSiteInternetRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/processus': typeof ProcessusRoute
+  '/realisations': typeof RealisationsRoute
   '/site-internet-artisan': typeof SiteInternetArtisanRoute
+  '/site-internet-boutique': typeof SiteInternetBoutiqueRoute
   '/site-internet-couvreur': typeof SiteInternetCouvreurRoute
+  '/site-internet-elagueur': typeof SiteInternetElagueurRoute
   '/site-internet-electricien': typeof SiteInternetElectricienRoute
   '/site-internet-plombier': typeof SiteInternetPlombierRoute
   '/site-internet-pme': typeof SiteInternetPmeRoute
+  '/site-internet-restaurant': typeof SiteInternetRestaurantRoute
+  '/tarifs': typeof TarifsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agence': typeof AgenceRoute
+  '/contact': typeof ContactRoute
   '/creation-site-internet': typeof CreationSiteInternetRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/processus': typeof ProcessusRoute
+  '/realisations': typeof RealisationsRoute
   '/site-internet-artisan': typeof SiteInternetArtisanRoute
+  '/site-internet-boutique': typeof SiteInternetBoutiqueRoute
   '/site-internet-couvreur': typeof SiteInternetCouvreurRoute
+  '/site-internet-elagueur': typeof SiteInternetElagueurRoute
   '/site-internet-electricien': typeof SiteInternetElectricienRoute
   '/site-internet-plombier': typeof SiteInternetPlombierRoute
   '/site-internet-pme': typeof SiteInternetPmeRoute
+  '/site-internet-restaurant': typeof SiteInternetRestaurantRoute
+  '/tarifs': typeof TarifsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agence': typeof AgenceRoute
+  '/contact': typeof ContactRoute
   '/creation-site-internet': typeof CreationSiteInternetRoute
   '/mentions-legales': typeof MentionsLegalesRoute
   '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
+  '/processus': typeof ProcessusRoute
+  '/realisations': typeof RealisationsRoute
   '/site-internet-artisan': typeof SiteInternetArtisanRoute
+  '/site-internet-boutique': typeof SiteInternetBoutiqueRoute
   '/site-internet-couvreur': typeof SiteInternetCouvreurRoute
+  '/site-internet-elagueur': typeof SiteInternetElagueurRoute
   '/site-internet-electricien': typeof SiteInternetElectricienRoute
   '/site-internet-plombier': typeof SiteInternetPlombierRoute
   '/site-internet-pme': typeof SiteInternetPmeRoute
+  '/site-internet-restaurant': typeof SiteInternetRestaurantRoute
+  '/tarifs': typeof TarifsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/agence'
+    | '/contact'
     | '/creation-site-internet'
     | '/mentions-legales'
     | '/politique-de-confidentialite'
+    | '/processus'
+    | '/realisations'
     | '/site-internet-artisan'
+    | '/site-internet-boutique'
     | '/site-internet-couvreur'
+    | '/site-internet-elagueur'
     | '/site-internet-electricien'
     | '/site-internet-plombier'
     | '/site-internet-pme'
+    | '/site-internet-restaurant'
+    | '/tarifs'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/agence'
+    | '/contact'
     | '/creation-site-internet'
     | '/mentions-legales'
     | '/politique-de-confidentialite'
+    | '/processus'
+    | '/realisations'
     | '/site-internet-artisan'
+    | '/site-internet-boutique'
     | '/site-internet-couvreur'
+    | '/site-internet-elagueur'
     | '/site-internet-electricien'
     | '/site-internet-plombier'
     | '/site-internet-pme'
+    | '/site-internet-restaurant'
+    | '/tarifs'
   id:
     | '__root__'
     | '/'
+    | '/agence'
+    | '/contact'
     | '/creation-site-internet'
     | '/mentions-legales'
     | '/politique-de-confidentialite'
+    | '/processus'
+    | '/realisations'
     | '/site-internet-artisan'
+    | '/site-internet-boutique'
     | '/site-internet-couvreur'
+    | '/site-internet-elagueur'
     | '/site-internet-electricien'
     | '/site-internet-plombier'
     | '/site-internet-pme'
+    | '/site-internet-restaurant'
+    | '/tarifs'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgenceRoute: typeof AgenceRoute
+  ContactRoute: typeof ContactRoute
   CreationSiteInternetRoute: typeof CreationSiteInternetRoute
   MentionsLegalesRoute: typeof MentionsLegalesRoute
   PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
+  ProcessusRoute: typeof ProcessusRoute
+  RealisationsRoute: typeof RealisationsRoute
   SiteInternetArtisanRoute: typeof SiteInternetArtisanRoute
+  SiteInternetBoutiqueRoute: typeof SiteInternetBoutiqueRoute
   SiteInternetCouvreurRoute: typeof SiteInternetCouvreurRoute
+  SiteInternetElagueurRoute: typeof SiteInternetElagueurRoute
   SiteInternetElectricienRoute: typeof SiteInternetElectricienRoute
   SiteInternetPlombierRoute: typeof SiteInternetPlombierRoute
   SiteInternetPmeRoute: typeof SiteInternetPmeRoute
+  SiteInternetRestaurantRoute: typeof SiteInternetRestaurantRoute
+  TarifsRoute: typeof TarifsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -155,6 +259,20 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/agence': {
+      id: '/agence'
+      path: '/agence'
+      fullPath: '/agence'
+      preLoaderRoute: typeof AgenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/creation-site-internet': {
@@ -178,6 +296,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/processus': {
+      id: '/processus'
+      path: '/processus'
+      fullPath: '/processus'
+      preLoaderRoute: typeof ProcessusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/realisations': {
+      id: '/realisations'
+      path: '/realisations'
+      fullPath: '/realisations'
+      preLoaderRoute: typeof RealisationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/site-internet-artisan': {
       id: '/site-internet-artisan'
       path: '/site-internet-artisan'
@@ -185,11 +317,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteInternetArtisanRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/site-internet-boutique': {
+      id: '/site-internet-boutique'
+      path: '/site-internet-boutique'
+      fullPath: '/site-internet-boutique'
+      preLoaderRoute: typeof SiteInternetBoutiqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/site-internet-couvreur': {
       id: '/site-internet-couvreur'
       path: '/site-internet-couvreur'
       fullPath: '/site-internet-couvreur'
       preLoaderRoute: typeof SiteInternetCouvreurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/site-internet-elagueur': {
+      id: '/site-internet-elagueur'
+      path: '/site-internet-elagueur'
+      fullPath: '/site-internet-elagueur'
+      preLoaderRoute: typeof SiteInternetElagueurRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/site-internet-electricien': {
@@ -213,19 +359,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteInternetPmeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/site-internet-restaurant': {
+      id: '/site-internet-restaurant'
+      path: '/site-internet-restaurant'
+      fullPath: '/site-internet-restaurant'
+      preLoaderRoute: typeof SiteInternetRestaurantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tarifs': {
+      id: '/tarifs'
+      path: '/tarifs'
+      fullPath: '/tarifs'
+      preLoaderRoute: typeof TarifsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgenceRoute: AgenceRoute,
+  ContactRoute: ContactRoute,
   CreationSiteInternetRoute: CreationSiteInternetRoute,
   MentionsLegalesRoute: MentionsLegalesRoute,
   PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
+  ProcessusRoute: ProcessusRoute,
+  RealisationsRoute: RealisationsRoute,
   SiteInternetArtisanRoute: SiteInternetArtisanRoute,
+  SiteInternetBoutiqueRoute: SiteInternetBoutiqueRoute,
   SiteInternetCouvreurRoute: SiteInternetCouvreurRoute,
+  SiteInternetElagueurRoute: SiteInternetElagueurRoute,
   SiteInternetElectricienRoute: SiteInternetElectricienRoute,
   SiteInternetPlombierRoute: SiteInternetPlombierRoute,
   SiteInternetPmeRoute: SiteInternetPmeRoute,
+  SiteInternetRestaurantRoute: SiteInternetRestaurantRoute,
+  TarifsRoute: TarifsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -3,14 +3,15 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 const nav = [
   { label: "Accueil", to: "/", hash: "" },
-  { label: "Nos réalisations", to: "/", hash: "realisations" },
-  { label: "Solutions", to: "/", hash: "solutions" },
-  { label: "Tarifs", to: "/", hash: "tarifs" },
+  { label: "Réalisations", to: "/realisations", hash: "" },
+  { label: "Tarifs", to: "/tarifs", hash: "" },
+  { label: "Agence", to: "/agence", hash: "" },
   { label: "FAQ", to: "/", hash: "faq" },
 ];
 
@@ -50,17 +51,19 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
+          <ThemeToggle />
           <Button variant="hero" size="lg" asChild>
-            <Link to="/" hash="contact" onClick={() => track("cta_click", { location: "header" })}>
+            <Link to="/contact" onClick={() => track("cta_click", { location: "header" })}>
               Parler de mon projet
             </Link>
           </Button>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
           <Button variant="hero" size="sm" asChild>
-            <Link to="/" hash="contact" onClick={() => track("cta_click", { location: "header_mobile" })}>
+            <Link to="/contact" onClick={() => track("cta_click", { location: "header_mobile" })}>
               Mon projet
             </Link>
           </Button>

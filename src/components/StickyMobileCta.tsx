@@ -32,8 +32,7 @@ export function StickyMobileCta() {
           <Phone className="size-5 text-primary" />
         </a>
         <Link
-          to="/"
-          hash="contact"
+          to="/contact"
           onClick={() => track("cta_click", { location: "sticky_mobile" })}
           className="shadow-glow flex h-11 flex-1 items-center justify-center rounded-xl bg-primary text-sm font-semibold text-primary-foreground"
         >

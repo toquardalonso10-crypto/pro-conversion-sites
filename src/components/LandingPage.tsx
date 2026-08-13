@@ -32,8 +32,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button variant="hero" size="xl" asChild>
               <Link
-                to="/"
-                hash="contact"
+                to="/contact"
                 onClick={() => track("cta_click", { location: "landing_hero" })}
               >
                 Parler de mon projet
@@ -41,9 +40,7 @@ export function LandingPage({ content }: { content: LandingContent }) {
               </Link>
             </Button>
             <Button variant="outlineSoft" size="xl" asChild>
-              <Link to="/" hash="realisations">
-                Voir nos réalisations
-              </Link>
+              <Link to="/realisations">Voir nos réalisations</Link>
             </Button>
           </div>
         </div>

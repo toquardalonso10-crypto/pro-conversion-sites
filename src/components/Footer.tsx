@@ -24,23 +24,33 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/" hash="realisations" className="hover:text-foreground">
-                Nos réalisations
+              <Link to="/agence" className="hover:text-foreground">
+                L'agence
               </Link>
             </li>
             <li>
-              <Link to="/" hash="solutions" className="hover:text-foreground">
-                Solutions
+              <Link to="/realisations" className="hover:text-foreground">
+                Réalisations
               </Link>
             </li>
             <li>
-              <Link to="/" hash="tarifs" className="hover:text-foreground">
+              <Link to="/tarifs" className="hover:text-foreground">
                 Tarifs
+              </Link>
+            </li>
+            <li>
+              <Link to="/processus" className="hover:text-foreground">
+                Notre processus
               </Link>
             </li>
             <li>
               <Link to="/" hash="faq" className="hover:text-foreground">
                 FAQ
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-foreground">
+                Contact
               </Link>
             </li>
           </ul>
@@ -72,6 +82,21 @@ export function Footer() {
             <li>
               <Link to="/site-internet-electricien" className="hover:text-foreground">
                 Site internet électricien
+              </Link>
+            </li>
+            <li>
+              <Link to="/site-internet-elagueur" className="hover:text-foreground">
+                Site internet élagueur
+              </Link>
+            </li>
+            <li>
+              <Link to="/site-internet-restaurant" className="hover:text-foreground">
+                Site internet restaurant
+              </Link>
+            </li>
+            <li>
+              <Link to="/site-internet-boutique" className="hover:text-foreground">
+                Site internet boutique
               </Link>
             </li>
             <li>

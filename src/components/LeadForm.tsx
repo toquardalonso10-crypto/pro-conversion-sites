@@ -12,10 +12,10 @@ const secteurs = [
   "Couvreur",
   "Plombier / Chauffagiste",
   "Électricien",
-  "Paysagiste",
+  "Élagueur / Paysagiste",
   "Garage / Automobile",
   "Restaurant",
-  "Commerce",
+  "Boutique / Commerce",
   "Coiffeur / Esthétique",
   "Immobilier",
   "Profession indépendante",
@@ -30,7 +30,13 @@ const typesProjet = [
   "Je ne sais pas encore",
 ];
 
-const budgets = ["À définir ensemble", "Moins de 1 500 €", "1 500 – 3 000 €", "3 000 – 6 000 €", "Plus de 6 000 €"];
+const budgets = [
+  "Site Classique (500 €)",
+  "Sur-Mesure — 1 000 à 3 000 €",
+  "Sur-Mesure — 3 000 à 6 000 €",
+  "Sur-Mesure — plus de 6 000 €",
+  "À définir ensemble",
+];
 
 const fieldClass =
   "h-11 rounded-xl border-border bg-background/60 focus-visible:ring-primary/60 focus-visible:ring-2";

@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
+import { ProjectMockup } from "@/components/ProjectMockup";
 import { projects, type Project } from "@/lib/site";
 import { track } from "@/lib/analytics";
 
@@ -62,14 +63,9 @@ export function Portfolio() {
                 }}
                 className="card-premium group block w-full overflow-hidden p-0 text-left hover:-translate-y-1 hover:border-primary/50"
               >
-                <img
-                  src={p.image}
-                  alt={`Mockup du site internet réalisé pour une ${p.company.toLowerCase()}`}
-                  loading="lazy"
-                  width={1200}
-                  height={900}
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
+                <div className="aspect-[4/3] w-full transition-transform duration-700 group-hover:scale-[1.03]">
+                  <ProjectMockup category={p.category} />
+                </div>
                 <div className="p-6">
                   <p className="text-xs font-medium tracking-wide text-primary uppercase">
                     {p.sector}
@@ -102,14 +98,9 @@ export function Portfolio() {
                 <DialogTitle className="font-display text-2xl">{open.company}</DialogTitle>
                 <DialogDescription>{open.sector}</DialogDescription>
               </DialogHeader>
-              <img
-                src={open.image}
-                alt={`Aperçu du site réalisé pour une ${open.company.toLowerCase()}`}
-                loading="lazy"
-                width={1200}
-                height={900}
-                className="w-full rounded-xl border border-border"
-              />
+              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl border border-border">
+                <ProjectMockup category={open.category} />
+              </div>
               <dl className="mt-2 space-y-4 text-sm">
                 <div>
                   <dt className="font-semibold">Objectif</dt>
