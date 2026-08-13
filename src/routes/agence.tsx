@@ -5,9 +5,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { track } from "@/lib/analytics";
 
-const title = "L'agence | Kliviq — Sites internet pensés pour convertir";
+const title = "L'agence | Web Boost — Sites internet pensés pour convertir";
 const description =
-  "Kliviq conçoit des sites internet pour artisans, commerces et entreprises locales. Notre méthode, nos exigences, et pourquoi nous refusons les gabarits recyclés et les faux résultats.";
+  "Web Boost conçoit des sites internet pour artisans, commerces et entreprises locales. Notre méthode, nos exigences, et pourquoi nous refusons les gabarits recyclés et les faux résultats.";
 
 export const Route = createFileRoute("/agence")({
   head: () => ({
@@ -61,7 +61,7 @@ function AgencePage() {
             Un site internet est un outil commercial. Nous le construisons comme tel.
           </h1>
           <p className="mt-6 text-base text-muted-foreground sm:text-lg">
-            Kliviq conçoit des sites pour les artisans, les commerces et les entreprises locales qui
+            Web Boost conçoit des sites pour les artisans, les commerces et les entreprises locales qui
             veulent un outil qui travaille pour eux, pas une simple carte de visite numérique.
           </p>
         </div>

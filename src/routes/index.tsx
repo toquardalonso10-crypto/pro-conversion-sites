@@ -15,7 +15,7 @@ import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { faq, site } from "@/lib/site";
 
-const title = "Création de sites internet qui apportent des clients | Kliviq";
+const title = "Création de sites internet qui apportent des clients | Web Boost";
 const description =
   "Agence de création de sites internet professionnels pour artisans, commerces et PME. Des sites rapides, optimisés Google et conçus pour générer des demandes de devis.";
 

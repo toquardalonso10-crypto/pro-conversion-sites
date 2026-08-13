@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour couvreur : générer des demandes de devis | Kliviq";
+const title = "Site internet pour couvreur : générer des demandes de devis | Web Boost";
 const description =
   "Site internet pour couvreur et zingueur : rassurer sur un chantier engageant, montrer vos toitures réalisées et capter les demandes de devis locales.";
 

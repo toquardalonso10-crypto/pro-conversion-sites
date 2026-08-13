@@ -11,7 +11,7 @@ export function Logo({ className }: { className?: string }) {
           <path d="M4 17.5 10 7l4 7 2-3.5 4 7" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </span>
-      <span className="font-display text-lg font-semibold tracking-tight">Kliviq</span>
+      <span className="font-display text-lg font-semibold tracking-tight">Web Boost</span>
     </span>
   );
 }

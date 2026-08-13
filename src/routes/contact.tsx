@@ -5,7 +5,7 @@ import { Reveal } from "@/components/Reveal";
 import { site } from "@/lib/site";
 import { track } from "@/lib/analytics";
 
-const title = "Contact | Kliviq — Parlons de votre projet";
+const title = "Contact | Web Boost — Parlons de votre projet";
 const description =
   "Parlez-nous de votre activité et de votre projet de site internet. Réponse rapide, sans engagement.";
 

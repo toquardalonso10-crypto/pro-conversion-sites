@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour boutique et commerce | Kliviq";
+const title = "Site internet pour boutique et commerce | Web Boost";
 const description =
   "Site internet pour boutique de vêtements ou commerce : une vitrine qui reflète votre identité, met en avant vos collections et donne envie de pousser la porte ou de commander.";
 

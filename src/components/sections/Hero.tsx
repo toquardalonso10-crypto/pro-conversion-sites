@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroVisual } from "@/components/HeroVisual";
+import { Magnetic } from "@/components/Magnetic";
 import { track } from "@/lib/analytics";
 
 const proofs = [
@@ -39,12 +40,14 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button variant="hero" size="xl" asChild>
-              <Link to="/" hash="contact" onClick={() => track("cta_click", { location: "hero_primary" })}>
-                Créer mon site
-                <ArrowRight className="size-4" />
-              </Link>
-            </Button>
+            <Magnetic>
+              <Button variant="hero" size="xl" asChild>
+                <Link to="/" hash="contact" onClick={() => track("cta_click", { location: "hero_primary" })}>
+                  Créer mon site
+                  <ArrowRight className="size-4" />
+                </Link>
+              </Button>
+            </Magnetic>
             <Button variant="outlineSoft" size="xl" asChild>
               <Link
                 to="/"

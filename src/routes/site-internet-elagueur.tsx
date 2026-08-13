@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour élagueur : rassurer avant d'intervenir | Kliviq";
+const title = "Site internet pour élagueur : rassurer avant d'intervenir | Web Boost";
 const description =
   "Site internet pour élagueur et arboriste : afficher vos garanties, montrer vos chantiers en hauteur et capter les demandes d'intervention et d'urgence dans votre secteur.";
 

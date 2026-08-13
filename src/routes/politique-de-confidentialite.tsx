@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { site } from "@/lib/site";
 
-const title = "Politique de confidentialité | Kliviq";
+const title = "Politique de confidentialité | Web Boost";
 const description =
   "Politique de confidentialité : données collectées via le formulaire de contact, finalités, durée de conservation, cookies et exercice de vos droits.";
 

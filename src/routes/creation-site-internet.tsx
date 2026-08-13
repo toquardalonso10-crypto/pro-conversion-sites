@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Création de site internet pour entreprise | Kliviq";
+const title = "Création de site internet pour entreprise | Web Boost";
 const description =
   "Création de site internet professionnel : structure, contenu et parcours pensés pour transformer vos visiteurs en demandes de contact. Devis clair, accompagnement complet.";
 

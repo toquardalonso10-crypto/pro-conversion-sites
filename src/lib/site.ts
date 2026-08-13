@@ -1,6 +1,6 @@
 /** Coordonnées de l'agence — à remplacer par les vraies informations. */
 export const site = {
-  name: "Kliviq",
+  name: "Web Boost",
   tagline: "Création de sites internet professionnels.",
   phone: "+33 0 00 00 00 00",
   email: "contact@example.com",

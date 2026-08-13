@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour restaurant : donner envie de réserver | Kliviq";
+const title = "Site internet pour restaurant : donner envie de réserver | Web Boost";
 const description =
   "Site internet pour restaurant : une carte lisible sur mobile, une réservation en un geste et des photos qui donnent envie de venir, sans commission sur chaque client.";
 

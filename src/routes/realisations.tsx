@@ -6,7 +6,7 @@ import { ProjectMockup } from "@/components/ProjectMockup";
 import { projects } from "@/lib/site";
 import { track } from "@/lib/analytics";
 
-const title = "Réalisations | Kliviq — Sites internet livrés à nos clients";
+const title = "Réalisations | Web Boost — Sites internet livrés à nos clients";
 const description =
   "Des sites conçus pour un objectif commercial précis : faire venir, rassurer, puis déclencher le contact. Découvrez nos réalisations par secteur.";
 

@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/Logo";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { Magnetic } from "@/components/Magnetic";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
@@ -52,16 +52,16 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ThemeToggle />
-          <Button variant="hero" size="lg" asChild>
-            <Link to="/contact" onClick={() => track("cta_click", { location: "header" })}>
-              Parler de mon projet
-            </Link>
-          </Button>
+          <Magnetic>
+            <Button variant="hero" size="lg" asChild>
+              <Link to="/contact" onClick={() => track("cta_click", { location: "header" })}>
+                Parler de mon projet
+              </Link>
+            </Button>
+          </Magnetic>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <ThemeToggle />
           <Button variant="hero" size="sm" asChild>
             <Link to="/contact" onClick={() => track("cta_click", { location: "header_mobile" })}>
               Mon projet

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { site } from "@/lib/site";
 
-const title = "Mentions légales | Kliviq";
+const title = "Mentions légales | Web Boost";
 const description = "Mentions légales du site : éditeur, hébergement et propriété intellectuelle.";
 
 export const Route = createFileRoute("/mentions-legales")({

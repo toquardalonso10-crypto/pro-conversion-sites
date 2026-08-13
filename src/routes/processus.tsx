@@ -5,9 +5,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { track } from "@/lib/analytics";
 
-const title = "Notre processus | Kliviq — Comment nous construisons votre site";
+const title = "Notre processus | Web Boost — Comment nous construisons votre site";
 const description =
-  "De l'échange initial à la mise en ligne : découvrez étape par étape comment Kliviq construit votre site internet, sans jargon technique.";
+  "De l'échange initial à la mise en ligne : découvrez étape par étape comment Web Boost construit votre site internet, sans jargon technique.";
 
 export const Route = createFileRoute("/processus")({
   head: () => ({

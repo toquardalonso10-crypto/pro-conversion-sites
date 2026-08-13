@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour plombier : capter les urgences | Kliviq";
+const title = "Site internet pour plombier : capter les urgences | Web Boost";
 const description =
   "Site internet pour plombier chauffagiste : être joignable en cas d'urgence, présenter vos interventions et recevoir des demandes de devis dans votre secteur.";
 

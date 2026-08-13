@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour artisan : être trouvé et choisi | Kliviq";
+const title = "Site internet pour artisan : être trouvé et choisi | Web Boost";
 const description =
   "Site internet pour artisan : montrez vos chantiers, rassurez vos clients et recevez des demandes de devis depuis votre zone d'intervention.";
 

@@ -22,12 +22,12 @@ export function Pricing() {
               <div
                 className={`card-premium relative flex h-full flex-col p-7 ${
                   o.featured
-                    ? "shadow-glow border-primary/60 bg-surface/90 lg:-mt-4 lg:p-8"
+                    ? "shadow-gold border-gold/60 bg-surface/90 lg:-mt-4 lg:p-8"
                     : "hover:border-primary/40"
                 }`}
               >
                 {o.featured && (
-                  <span className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                  <span className="absolute -top-3 left-7 rounded-full bg-gold px-3 py-1 text-xs font-semibold text-gold-foreground">
                     Offre recommandée
                   </span>
                 )}

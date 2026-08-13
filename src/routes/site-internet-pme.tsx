@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour PME : crédibilité et prospection | Kliviq";
+const title = "Site internet pour PME : crédibilité et prospection | Web Boost";
 const description =
   "Site internet pour PME : appuyer votre prospection, crédibiliser l'entreprise auprès de vos clients et partenaires, et générer des demandes entrantes qualifiées.";
 

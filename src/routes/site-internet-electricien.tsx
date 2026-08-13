@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LandingPage, type LandingContent } from "@/components/LandingPage";
 
-const title = "Site internet pour électricien : particuliers et pros | Kliviq";
+const title = "Site internet pour électricien : particuliers et pros | Web Boost";
 const description =
   "Site internet pour électricien : mise aux normes, rénovation, domotique, bornes de recharge. Présentez vos interventions et recevez des demandes de devis qualifiées.";
 
